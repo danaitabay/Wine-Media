@@ -5,9 +5,10 @@
         <title>Wine with me</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/	bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
-  	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script> 
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 
         <style>
@@ -56,7 +57,7 @@
 	<header>
 		<nav>
 			<ul>
-				<li><a href="/home/danait/Documents/mywebsite/wine4.html">HOME</a></li>
+				<li><a href="wine4.html">HOME</a></li>
 				<li><a href="about/wineabout.html">ABOUT</a></li>
 				<li><a href="#">REVIEWS</a></li>
 				<li><a id="login" href="#">LOGIN</a></li>
@@ -73,13 +74,13 @@
 		<div class="row">
 			<div class="col-sm-6">
 				<div class="jumbotron text-center">
-					<h1>wines in white bucket</h1>
+					<h1 class="bucket">wines in white bucket</h1>
 			 		<p>Wines with good review goes here!</p>
 				</div>
 			</div>
 			<div class="col-sm-6">
 				<div class="jumbotron text-center">
- 					<h1>wines in black bucket</h1>
+ 					<h1 class="bucket">wines in black bucket</h1>
   					<p>Wines with bad review goes here!</p>
 				</div>
 			</div>
@@ -115,7 +116,7 @@
 	<div class="col-sm-1">
 	</div>
 </div>
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+
 <script type="text/javascript">
 	var x = "don't miss out on wine deals of the day,";
 	var y = " 50% off"
@@ -125,7 +126,7 @@
 	}
 	$(document).ready(function() {
 		//$("#title").slideUp(1000).slideDown(1000);
-		//$("#title").hide(1000).show(1000);
+		$(".bucket").hide(2000).delay(2000).show(1000);
 		$("#title").css({color:"purple",fontWeight:"bold"});
 	});
 </script>
