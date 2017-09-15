@@ -1,0 +1,32 @@
+<style>
+        body {
+            font-size: 12px;
+		background:#999;
+        }
+        h2 {
+            color: rgb(0, 232, 15);
+            font-size: 1.5em;
+        }  
+        p {
+            color: rgb(191, 0, 255);
+            font-family: "Helvetica", sans-serif;
+        }
+        #wine-info {
+            color: purple;
+        }
+	header {
+		display: inline-block;
+	}
+        nav ul li {
+		list-style-type: none;
+		display: inline-block;
+		background: #000066;
+		color: white;
+		padding: 10px 85px;
+		border-radius: 10px;
+		margin: 10px;	
+	}
+	nav ul li a {
+		color: white;
+	}
+</style>
