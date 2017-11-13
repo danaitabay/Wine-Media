@@ -1,0 +1,96 @@
+<!DOCTYPE html5>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Wine with me</title>
+    	<link rel="stylesheet" href="style/main.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+  		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> 
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		 <script type="text/javascript" src="js/wine.js"></script>
+
+    </head>
+
+    <body>
+
+<div class="row">
+	<div class="col-sm-1">
+	</div>
+	<div class="col-sm-8">
+    		<div class="text-center">
+			<h1 id="title">THE WINE MEDIA</h1> 
+		</div>
+	<header>
+		<nav>
+			<ul>
+				<li><a href="wine4.html">HOME</a></li>
+				<li><a href="about/wineabout.html">ABOUT</a></li>
+				<li><a href="#">REVIEWS</a></li>
+				<li><a id="login" href="#">LOGIN</a></li>
+				<li><a href="#">SIGNUP</a></li>
+			</ul>
+		</nav>
+	</header>
+<button type="button" onclick='document.getElementById("login").innerHTML = "User Name: " '> Login
+</button>
+      		<div class="text-center">
+   			  	
+    		<p id="wine-info">This website is for wine lovers! Let's wine and socialize by sharing <em>our</em> favorite wine, deals on wines and  <strong>oragnize wine tasting <em>events</em> </strong>.</p>
+		</div>
+		<div class="row">
+			<div class="col-sm-6">
+				<div class="jumbotron text-center">
+					<h1 class="bucket">wines in white bucket</h1>
+			 		<p>Wines with good review goes here!</p>
+				</div>
+			</div>
+			<div class="col-sm-6">
+				<div class="jumbotron text-center">
+ 					<h1 class="bucket">wines in black bucket</h1>
+  					<p>Wines with bad review goes here!</p>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class=col-sm-12>
+				<div class="text-center">
+    					<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_OvcOTQOaRF1ILDiK950-7x3hrNPl-mXMr92oTTV4HMZWVPkb" width="600" height="350"> 
+   				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-sm-2">
+		<div id="logo" class="float-right">
+     			<img src="http://www.lifeofvineseverywhere.com/wp-content/uploads/2016/06/Wine-Life-Media-Logo-QUALITY.jpeg" width="150" height="100">
+     	</div>
+		<nav>
+			<form class="navbar-form navbar-left" role="search">
+  				<div class="form-group">
+   					 <input type="text" class="form-control" placeholder="Search">
+ 				 </div>
+ 					 <button type="submit" class="btn btn-default">Search</button>
+			</form>
+			<ul>
+				<li><a href="#">FINE COLLECTIONS</a></li>
+				<li><a href="#">STORES</a></li>
+				<li><a href="#">UPLOAD</a></li>
+				<li><a href="#">EVENTS</a></li>
+				<li><a href="https://winestore-online.com">WINE DEALS</a></li>
+			</ul>
+		</nav>
+      	</div>
+	<div class="col-sm-1">
+	</div>
+</div>
+
+
+<form>
+<input type="button" value="WINE DEALS" onclick="deals()">
+</form>
+<noscript>
+<h3>This site requires JavaScript</h3>
+</noscript>
+  </body>
+</html>
