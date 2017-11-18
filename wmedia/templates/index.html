@@ -1,0 +1,19 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<div class="text-center">
+	<h1>Grape Expectations</h1>
+</div>
+  <p>Welcome to <em>Grape Expectations</em>. This website is for wine lovers! Let's wine and socialize by sharing our favorite wine, deals on wines and oragnizing wine tasting events</em>.</p>
+
+<h2>Content</h2>
+
+  <p>Grape Expectation has the following Wines and reviews:</p>
+  <ul>
+    <li><strong>Wines:</strong> {{ num_wines }}</li>
+    <li><strong>Inventory:</strong> {{ num_instances }}</li>
+    <li><strong>Inventory available:</strong> {{ num_instances_available }}</li>
+    <li><strong>Companies:</strong> {{ num_companies }}</li>
+  </ul>
+
+{% endblock %}

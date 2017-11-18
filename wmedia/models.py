@@ -87,3 +87,6 @@ class Company(models.Model):
         String for representing the Model object.
         """
         return '%s' % (self.company_name)
+
+    class Meta:
+        ordering = ['company_name']

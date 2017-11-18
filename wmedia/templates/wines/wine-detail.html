@@ -1,0 +1,22 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+  <h1>Title: {{ wine.Brand_name }}</h1>
+
+  <p><strong>Company:</strong> <a href="{% url 'company-detail' wine.Company.pk %}">{{ wine.company_name }}</a></p> <!-- author detail link not yet defined -->
+  <p><strong>Description:</strong> {{ wine.Description }}</p>
+  <p><strong>Types:</strong> {{ wine.types }}</p> 
+  <p><strong>Bottled:</strong> {{ wine.bottled_date }}</p>  
+  <p><strong>Catagory:</strong> {% for catagory in wine.catagory.all %} {{ catagory }}{% if not forloop.last %}, {% endif %}{% endfor %}</p>  
+
+  <div style="margin-left:20px;margin-top:20px">
+    <h4>Stock</h4>
+
+    {% for stock in wine.wineinstance_set.all %}
+    <hr>
+    <p class="{% if stock.status == 'a' %}text-success{% else %}text-warning{% endif %}">{{ stock.get_status_display }}</p>
+    {% if stock.status != 'a' %}<p><strong>Item unavailable:</strong></p>{% endif %}
+    <p class="text-muted"><strong>Id:</strong> {{stock.id}}</p>
+    {% endfor %}
+  </div>
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+    <h1>Wine List</h1>
+
+    {% if wine_list %}
+    <ul>
+
+      {% for wine in wine_list %}
+      <li>
+        {<a href="{{ wine.get_absolute_url }}">{{ wine.Brand_name }}</a> ({{wine.company_name}})}
+        
+      </li>
+      {% endfor %}
+
+    </ul>
+    {% else %}
+      <p>There are no wines available.</p>
+    {% endif %}       
+{% endblock %}
