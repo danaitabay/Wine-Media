@@ -1,0 +1,15 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+  <h1>Title: {{ company.company_name }}</h1>
+
+  <p><strong>Description:</strong> {{ wine.Description }}</p>
+  <p><strong>Types:</strong> {{ wine.types }}</p> 
+  <p><strong>Bottled:</strong> {{ wine.bottled_date }}</p>  
+
+  <div style="margin-left:20px;margin-top:20px">
+    
+      <hr>
+      <p class="text-muted"><strong>Id:</strong> {{stock.id}}</p>
+  </div>
+{% endblock %}

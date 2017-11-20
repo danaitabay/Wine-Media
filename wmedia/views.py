@@ -26,6 +26,19 @@ class WineListView(generic.ListView):
     #context_object_name = 'wine_list'   # your own name for the list as a template variable
     #queryset = Wine.objects #.filter(title__icontains='war')[:5] # Get 5 books containing the title war
     template_name = 'wines/wine_list.html'  # Specify your own template name/location
-
+    paginate_by = 10
+    
 class WineDetailView(generic.DetailView):
     model = Wine
+    template_name = 'wines/wine-detail.html' 
+
+class CompanyListView(generic.ListView):
+    model = Company
+    #context_object_name = 'wine_list'   # your own name for the list as a template variable
+    #queryset = Wine.objects #.filter(title__icontains='war')[:5] # Get 5 books containing the title war
+    template_name = 'company/company_list.html'  # Specify your own template name/location
+    paginate_by = 10
+    
+class CompanyDetailView(generic.DetailView):
+    model = Company
+    template_name = 'company/company_detail.html' 

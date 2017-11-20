@@ -3,7 +3,7 @@
 {% block content %}
   <h1>Title: {{ wine.Brand_name }}</h1>
 
-  <p><strong>Company:</strong> <a href="{% url 'company-detail' wine.Company.pk %}">{{ wine.company_name }}</a></p> <!-- author detail link not yet defined -->
+  <p><strong>Company:</strong> <a href="{% url 'company_detail' wine.company.pk %}">{{ wine.company }}</a>{{ wine.company_name }}</a></p> <!-- author detail link not yet defined -->
   <p><strong>Description:</strong> {{ wine.Description }}</p>
   <p><strong>Types:</strong> {{ wine.types }}</p> 
   <p><strong>Bottled:</strong> {{ wine.bottled_date }}</p>  
