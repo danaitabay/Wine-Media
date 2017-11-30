@@ -15,5 +15,5 @@
     <li><strong>Inventory available:</strong> {{ num_instances_available }}</li>
     <li><strong>Companies:</strong> {{ num_companies }}</li>
   </ul>
-
+  <p>You have visited this page {{ num_visits }}{% if num_visits == 1 %} time{% else %} times{% endif %}.</p>
 {% endblock %}

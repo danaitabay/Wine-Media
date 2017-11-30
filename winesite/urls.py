@@ -26,3 +26,7 @@ urlpatterns = [
     url(r'^wmedia/', include('wmedia.urls')),
     url(r'^$', RedirectView.as_view(url='/wmedia/', permanent=True)),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+#Add Django site authentication urls (for login, logout, password management)
+urlpatterns += [
+    url(r'^accounts/', include('django.contrib.auth.urls')),
+]

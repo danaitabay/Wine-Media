@@ -27,13 +27,13 @@ class WineAdmin(admin.ModelAdmin):
 @admin.register(WineInstance)
 class WineInstanceAdmin(admin.ModelAdmin):
 	list_filter = ('wine_type', 'wine')
-	list_display = ('wine', 'wine_type', 'id')
+	list_display = ('wine', 'wine_type', 'owner', 'id')
 	fieldsets = (
         (None, {
             'fields': ('wine','wine_type', 'id')
         }),
         ('Availability', {
-            'fields': (['status'])
+            'fields': (['status', 'owner'])
         }),
     )
 

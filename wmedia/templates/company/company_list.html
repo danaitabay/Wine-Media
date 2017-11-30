@@ -8,7 +8,7 @@
 
       {% for comp in company_list %}
       <li>
-        {<a href="{{ company.get_absolute_url }}">{{ company.company_name }}</a> ({{company.established_date}})}
+        {<a href="{{ comp.get_absolute_url }}">{{ comp.company_name }}</a> ({{comp.established_date}})}
         
       </li>
       {% endfor %}

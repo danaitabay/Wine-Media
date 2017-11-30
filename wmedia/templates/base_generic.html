@@ -23,9 +23,18 @@
       <div class="col-sm-2">
       {% block sidebar %}
       <ul class="sidebar-nav">
+          {% if user.is_authenticated %}
+          <li>User: {{ user.get_username }}</li>
+          <li><a href="{% url 'MyWine' %}">My Wines</a></li>
+          <li><a href="{% url 'logout'%}?next={{request.path}}">Logout</a></li>   
+          {% else %}
+          <li><a href="{% url 'login'%}?next={{request.path}}">Login</a></li> 
+          {% endif %} 
+          <br>
           <li><a href="{% url 'index' %}">Home</a></li>
           <li><a href=" {% url 'wines' %} ">All Wines</a></li>
           <li><a href="{% url 'company' %}">All Companies</a></li>
+          
       </ul>
      {% endblock %}
       </div>

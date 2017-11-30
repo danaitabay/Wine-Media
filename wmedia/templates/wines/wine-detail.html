@@ -3,11 +3,11 @@
 {% block content %}
   <h1>Title: {{ wine.Brand_name }}</h1>
 
-  <p><strong>Company:</strong> <a href="{% url 'company_detail' wine.company.pk %}">{{ wine.company }}</a>{{ wine.company_name }}</a></p> <!-- author detail link not yet defined -->
+  <p><strong>Company:</strong> <a href="{% url 'company-detail' wine.company_name.pk %}">{{ wine.company }}</a>{{ wine.company_name }}</a></p> 
   <p><strong>Description:</strong> {{ wine.Description }}</p>
-  <p><strong>Types:</strong> {{ wine.types }}</p> 
+  <p><strong>Types:</strong> {{ wine.types.all|join:", " }}</p> 
   <p><strong>Bottled:</strong> {{ wine.bottled_date }}</p>  
-  <p><strong>Catagory:</strong> {% for catagory in wine.catagory.all %} {{ catagory }}{% if not forloop.last %}, {% endif %}{% endfor %}</p>  
+ <!-- <p><strong>Catagory:</strong> {% for catagory in wine.catagory.all %} {{ catagory }}{% if not forloop.last %}, {% endif %}{% endfor %}</p> --> 
 
   <div style="margin-left:20px;margin-top:20px">
     <h4>Stock</h4>

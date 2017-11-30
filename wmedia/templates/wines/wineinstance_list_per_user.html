@@ -1,0 +1,19 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+    <h1>My Wines</h1>
+
+    {% if wineinstance_list %}
+    <ul>
+
+      {% for wineinst in wineinstance_list %} 
+      <li>
+        <a href="{% url 'wine-detail' wineinst.wine.pk %}">{{wineinst.wine.Brand_name}}</a> ({{ wineinst.status }})        
+      </li>
+      {% endfor %}
+    </ul>
+
+    {% else %}
+      <p>There are no wines on your list.</p>
+    {% endif %}       
+{% endblock %}

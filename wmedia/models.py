@@ -2,6 +2,7 @@ from django.db import models
 from django.utils import timezone
 from django.urls import reverse #Used to generate URLs by reversing the URL patterns
 import uuid
+from django.contrib.auth.models import User
 
 class Catagory(models.Model):
 
@@ -47,7 +48,8 @@ class WineInstance(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, help_text="Unique ID for this particular wine")
     wine = models.ForeignKey('Wine', on_delete=models.SET_NULL, null=True) 
     wine_type = models.CharField('Catagory', max_length=20, null=True)
-    
+    owner = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, blank=True)
+
     STOCK = (
         ('o', 'Out of stock'),
         ('a', 'Available'),
